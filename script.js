@@ -24,7 +24,7 @@ $(document).ready(function() {
            var due = 0;
         }
         else{
-          var due = subTotal - Advance:
+          var due = subTotal - Advance;
 };
         $("#abc").addClass("d-none");
         $("#companyName").text(`${companyName}`);
