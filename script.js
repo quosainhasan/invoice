@@ -40,6 +40,7 @@ $(document).ready(function() {
         $("#Invoice").removeClass("d-none");
     });
 $("#printBtn").click(function (){
+      $("#printBtn").addClass("d-none");
       window.print();
       return false;
 });
