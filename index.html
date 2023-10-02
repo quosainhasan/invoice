@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <section id="abc">
+        <form action="#">
+            <div class="container my-5">
+                <center><h1>Enter Details</h1></center>
+                <div class="row my-4">
+                    <div class="col">
+                        <label for="CompanyName" class="form-label">Company Name</label>
+                        <input type="text" name="CompanyName" id="CompanyName" class="form-control" placeholder="Company Name">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" name="Name" id="Name" class="form-control" placeholder="Coustomer Name">
+                    </div>
+                    <div class="col">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="tel" name="Phone" id="Phone" class="form-control" placeholder="Coustomer Number">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <label for="InvoiceNo" class="form-label">Invoice No</label>
+                        <input type="text" name="InvoiceNo" id="InvoiceNo" class="form-control" placeholder="Invoice Number">
+                    </div>
+                    <div class="col">
+                        <label for="Date" class="form-label">Date</label>
+                        <input type="date" name="Date" id="Date" class="form-control" placeholder="Date">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <label for="ItemName" class="form-label">Item Name</label>
+                        <input type="text" name="ItemName" id="ItemName" class="form-control" placeholder="Item Name">
+                    </div>
+                    <div class="col">
+                        <label for="Quantity" class="form-label">Quantity</label>
+                        <input type="number" name="Quantity" id="Quantity" class="form-control" placeholder="Quantity">
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label for="Price" class="form-label">Price</label>
+                            <input type="number" name="Price" id="Price" class="form-control" placeholder="Price">
+                        </div>
+                        <div class="col">
+                            <label for="Advance" class="form-label">Advance</label>
+                            <input type="number" name="Advance" id="Advance" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <button type="button" id="invoiceForm" class="btn btn-success mt-5">Success</button>
+                </center>
+            </div>
+        </form>
+    </section>
+    <!-- class="d-none" -->
+    <section class="d-none" id="Invoice">
+        <div class="container my-3">
+            <h1>Invoice</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>From:</h5>
+                    <p>Company Name: <strong><span id="companyName"></span></strong></p>
+                </div>
+                <div class="col-md-6">
+                    <h5>To:</h5>
+                    <p>Coustomer Name: <span id="coustomerName"></span></p>
+                    <p>Phone: <span id="coustomerPhone"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Invoice No:</h5>
+                    <p>Invoice No: <span id="invoiceNumber"></span></p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Date:</h5>
+                    <p>Date: <span id="invoiceDate"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="invoiceTable" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoiceTableBody">
+                            <tr>
+                                <td id="item"></td>
+                                <td id="itemQuantity"></td>
+                                <td id="itemPrice"></td>
+                                <td id="itemTotal"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-12">
+                    <h5>Sub Total: <span id="subTotal"></span></h5>
+                    <h5>Advance: <span id="advance"></span></h5>
+                    <h5>Due: <span id="due"></span></h5>
+                    <h5>Total: <span id="total"></span></h5>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-12">
+                    <center><button class="btn btn-primary" id="printBtn">Print</button></center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
