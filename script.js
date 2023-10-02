@@ -39,6 +39,10 @@ $(document).ready(function() {
         $("#due").text(`₹ ${due}`);
         $("#Invoice").removeClass("d-none");
     });
+$("#printBtn").click(function (){
+      window.print();
+      return false;
+});
 });
 // $(document).ready(function() {
 //     $("#invoiceForm").submit(function(event) {
