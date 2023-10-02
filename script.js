@@ -13,7 +13,7 @@ $(document).ready(function() {
         const Price = $("#Price").val();
         const Advance = $("#Advance").val();
         const subTotal = Quantity * Price;
-        var due = subTotal - Advance;
+        var due = 0;
         if (Advance > subTotal) {
             var total = Advance - subTotal;
         }
@@ -22,7 +22,10 @@ $(document).ready(function() {
         };
         if (due < Advance) {
            var due = 0;
-        };
+        }
+        else{
+          var due = subTotal - Advance:
+};
         $("#abc").addClass("d-none");
         $("#companyName").text(`${companyName}`);
         $("#coustomerName").text(`${clientName}`);
