@@ -13,18 +13,18 @@ $(document).ready(function() {
         const Price = $("#Price").val();
         const Advance = $("#Advance").val();
         const subTotal = Quantity * Price;
-        var due = 0;
+        //var due = 0;
         if (Advance > subTotal) {
             var total = Advance - subTotal;
         }
         else{
             var total = subTotal - Advance;
         };
-        if (due < Advance) {
-           var due = 0;
+        if (subTotal > Advance) {
+           var due = subTotal - Advance;
         }
         else{
-          var due = subTotal - Advance;
+          var due = Advance - subTotal;
 };
         $("#abc").addClass("d-none");
         $("#companyName").text(`${companyName}`);
